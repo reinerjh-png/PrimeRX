@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suplementos PrimeRX</title>
+    <link rel="icon" href="PrimeRX.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .pulse-hover:hover {
+            animation: pulse 1.5s infinite;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+
+    <nav class="bg-gradient-to-r from-indigo-900 to-blue-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-dumbbell text-yellow-400 text-2xl"></i>
+                <span class="font-bold text-xl bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">PrimeRX</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#products" class="hover:text-yellow-300 transition">Productos</a>
+                <a href="#about" class="hover:text-yellow-300 transition">Acerca de</a>
+                <a href="#reviews" class="hover:text-yellow-300 transition">Reseñas</a>
+                <a href="#contact" class="hover:text-yellow-300 transition">Contacto</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="md:hidden text-xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative bg-gradient-to-b from-indigo-900 to-blue-800 text-white overflow-hidden">
+        <div class="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Maximiza tus <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Gains</span></h1>
+                <p class="text-lg mb-6 md:mb-8 text-gray-200">Suplementos deportivos premium diseñados para ayudarte a superar tus límites y alcanzar el máximo rendimiento.</p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <a href="#products" class="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-orange-500 hover:to-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:scale-105">Compra ahora</a>
+                    <a href="#about" class="bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-bold py-3 px-6 rounded-full shadow-lg border border-white border-opacity-20 transition">Más información</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="floating">
+                    <img src="https://usasuplementos.co/wp-content/uploads/2025/05/banner-promos-1200x720-1.webp" alt="Suplementos proteicos" class="w-full max-w-md mx-auto">
+                </div>
+                <div class="absolute -bottom-10 -left-20 w-40 h-40 bg-yellow-400 rounded-full opacity-10 filter blur-xl"></div>
+                <div class="absolute top-0 -right-20 w-60 h-60 bg-indigo-500 rounded-full opacity-10 filter blur-xl"></div>
+                <div class="absolute bottom-20 right-10 w-20 h-20 bg-pink-500 rounded-full opacity-10 filter blur-xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Comprar por categoría</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-6 text-center shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="bg-white p-4 rounded-full inline-block mb-4 shadow-sm">
+                        <i class="fas fa-weight text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Proteina</h3>
+                    <p class="text-sm text-gray-600">Desarrollar y reparar músculos</p>
+                </div>
+                <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-6 text-center shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="bg-white p-4 rounded-full inline-block mb-4 shadow-sm">
+                        <i class="fas fa-bolt text-2xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Creatinas</h3>
+                    <p class="text-sm text-gray-600">Mejorar la recuperación muscular y la fuerza</p>
+                </div>
+                <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-6 text-center shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="bg-white p-4 rounded-full inline-block mb-4 shadow-sm">
+                        <i class="fas fa-fire text-2xl text-red-500"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Pre-Entrenos</h3>
+                    <p class="text-sm text-gray-600">Aumenta la energía y el rendimiento</p>
+                </div>
+                    <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-6 text-center shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="bg-white p-4 rounded-full inline-block mb-4 shadow-sm">
+                        <i class="fas fa-exchange-alt text-2xl text-green-500"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Vitaminas</h3>
+                    <p class="text-sm text-gray-600">Mantiene la salud y la función corporal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Nuestros productos más vendidos</h2>
+            
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="category-btn px-4 py-2 text-sm font-medium rounded-l-lg bg-blue-600 text-white">
+                        Todos los productos
+                    </button>
+                    <button type="button" class="category-btn px-4 py-2 text-sm font-medium bg-gray-200 hover:bg-gray-300">
+                        Proteina
+                    </button>
+                    <button type="button" class="category-btn px-4 py-2 text-sm font-medium bg-gray-200 hover:bg-gray-300">
+                        Creatinas
+                    </button>
+                    <button type="button" class="category-btn px-4 py-2 text-sm font-medium bg-gray-200 hover:bg-gray-300">
+                        Pre-Entrenos
+                    </button>
+                    <button type="button" class="category-btn px-4 py-2 text-sm font-medium rounded-r-lg bg-gray-200 hover:bg-gray-300">
+                        Vitaminas
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- PRODUCTO 1 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="https://winnernutrition.pe/wp-content/uploads/2020/09/BIGGER-60-FRASCO-2K-VAINILLA.png" alt="Winner Ganador" class="w-full h-48 object-contain bg-gray-100 p-4">
+                        <div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">El más vendido</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">Proteína Winner Bigger60 2kg</h3>
+                            <span class="text-yellow-400 text-sm"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">2 Scoops = 32g Proteina • 59g Carbos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">S/120.00</span>
+                              <button type="button"
+                                    class="text-blue-600 font-semibold hover:text-blue-800 text-lg px-3 py-1 rounded-md"
+                                    data-title="Proteína Winner Bigger60 2kg"
+                                    data-price="S/120.00"
+                                    data-rating="⭐⭐⭐⭐☆ (64 reseñas)"
+                                    data-desc="Nuestro ganador de peso Winner Bigger60 Contiene proteínas de alta calidad (suero y caseína) que apoyan la síntesis muscular y el desarrollo de masa magra. Potenciado con creatina y BCAAs, aumenta la fuerza, la resistencia y ayuda a reducir la fatiga muscular."
+                                    data-presentations="2000gr"
+                                    data-flavors="Chocolate, Vainilla, Fresa y plátano"
+                                    data-image="https://winnernutrition.pe/wp-content/uploads/2020/09/BIGGER-60-FRASCO-2K-VAINILLA.png"
+                                    onclick="openProductModal(this)">
+                                	👁️ Ver
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 2 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="https://winnernutrition.pe/wp-content/uploads/2020/09/whey-proteina-superior-frasco-2020.jpg" alt="Winner Proteina" class="w-full h-48 object-contain bg-gray-100 p-4">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">Proteína Concentrada Whey 1200gr</h3>
+                            <span class="text-yellow-400 text-sm"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">1 Scoop = 22gr Proteina • 12g Carbos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">S/120.00</span>
+                              <button type="button"
+                                    class="text-blue-600 font-semibold hover:text-blue-800 text-lg px-3 py-1 rounded-md"
+                                    data-title="Proteína Concentrada Whey Winner 1200gr"
+                                    data-price="S/120.00"
+                                    data-rating="⭐⭐⭐⭐☆ (64 reseñas)"
+                                    data-desc="Nuestra proteína Concentrada Winner Whey 1200gr es un suplemento en polvo de alta calidad hecho a base de suero de leche, sin azúcar y con un elevado contenido de proteínas. Enriquecido con L-Creatina y BCAAs (Isoleucina, Leucina y Valina), este producto apoya el crecimiento muscular y mejora la ingesta de proteínas diaria."
+                                    data-presentations="1200gr"
+                                    data-flavors="Chocolate, Vainilla y Fresa "
+                                    data-image="https://winnernutrition.pe/wp-content/uploads/2020/09/whey-proteina-superior-frasco-2020.jpg"
+                                    onclick="openProductModal(this)">
+                                	👁️ Ver
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 3 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="https://winnernutrition.pe/wp-content/uploads/2021/09/12.png" alt="Pre-Workout" class="w-full h-48 object-contain bg-gray-100 p-4">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">Creatina Monohidratada Winner 500gr</h3>
+                            <span class="text-yellow-400 text-sm"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">100% Pure Creatine • Monohydrate</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">S/110.00</span>
+                            <!-- BOTÓN VER -->
+                            <button type="button"
+                                class="text-blue-600 font-semibold hover:text-blue-800 text-lg px-3 py-1 rounded-md"
+                                data-title="Creatina Monohidratada Creabol Winner 500gr"
+                                data-price="S/110.00"
+                                data-rating="⭐⭐⭐⭐⭐ (84 reseñas)"
+                                data-desc="Nuestra creatina Winner Creabol 500gr ayuda a mejorar el rendimiento físico, aumentar la fuerza y acelerar la recuperación muscular tras entrenamientos intensos."
+                                data-presentations="500gr"
+                                data-flavors="Sin sabor"
+                                data-image="https://winnernutrition.pe/wp-content/uploads/2021/09/12.png"
+                                onclick="openProductModal(this)">
+                                👁️ Ver
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 4 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="https://winnernutrition.pe/wp-content/uploads/2020/09/prenox-frasco-2020.jpg" alt="Creatine" class="w-full h-48 object-contain bg-gray-100 p-4">
+                        <div class="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Nuevo</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">Pre-Entreno Prenox Winner 500gr</h3>
+                            <span class="text-yellow-400 text-sm"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">300mg Caffeine • 5.5mg Zing • 155mg Magnesio</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">S/115.00</span>
+                            <!-- BOTÓN VER -->
+                            <button type="button"
+                                class="text-blue-600 font-semibold hover:text-blue-800 text-lg px-3 py-1 rounded-md"
+                                data-title="Pre-Entreno Prenox Winner 500gr"
+                                data-price="S/115.00"
+                                data-rating="⭐⭐⭐⭐⭐ (92 reseñas)"
+                                data-desc="Prenox potencia tu energía y concentración durante el entrenamiento. Con 300mg de cafeína y mezcla vasodilatadora, incluye shaker de regalo."
+                                data-presentations="500gr"
+                                data-flavors="Naranja, Limón y Mandarina"
+                                data-image="https://winnernutrition.pe/wp-content/uploads/2020/09/prenox-frasco-2020.jpg"
+                                onclick="openProductModal(this)">
+                                👁️ Ver
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 5 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="https://oechsle.vteximg.com.br/arquivos/ids/19688623-1000-1000/imageUrl_1.jpg?v=638670047300770000" alt="Omega 3" class="w-full h-48 object-contain bg-gray-100 p-4">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">Omega 3 Sunvit 60 cápsulas</h3>
+                            <span class="text-yellow-400 text-sm"><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Recuperación muscular • Salud cardiovascular</p>
+                        <div class="w-full flex justify-between items-center">
+                            <span class="font-bold text-lg">S/60.00</spa>
+                            <!-- BOTÓN VER -->
+                            <button type="button"
+                                class="text-blue-600 font-semibold hover:text-blue-800 ml-auto text-lg px-3 py-1 rounded-md"
+                                data-title="Omega 3 Sunvit 60 cápsulas"
+                                data-price="S/60.00"
+                                data-rating="⭐⭐⭐⭐⭐ (67 reseñas)"
+                                data-desc="El Omega 3 es ideal para quienes entrenan fuerza o pesas. Sus ácidos grasos esenciales EPA y DHA ayudan a reducir la inflamación muscular, mejorar la recuperación, optimizar la función articular y mantener una buena salud cardiovascular. Un aliado clave para acelerar el progreso y mantener el cuerpo en óptimo estado."
+                                data-presentations="Frasco de 60 cápsulas"
+                                data-flavors="Sin sabor"
+                                data-image="https://oechsle.vteximg.com.br/arquivos/ids/19688623-1000-1000/imageUrl_1.jpg?v=638670047300770000"
+                                onclick="openProductModal(this)">
+                                👁️ Ver
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-2 px-6 rounded-full transition">Ver todos los productos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold mb-4">¿Por qué elegir?<span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> PrimeRX</span></h2>
+                    <p class="text-gray-700 mb-6">En PrimeRX, nos comprometemos a ofrecer únicamente suplementos de nutrición deportiva de la más alta calidad. Nuestros productos están formulados científicamente y rigurosamente probados para garantizar que obtengas los resultados que mereces.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check-circle text-blue-600 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Ingredientes Premium</h4>
+                                <p class="text-sm text-gray-600">Procedente de proveedores confiables, sin rellenos ni aditivos artificiales.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-flask text-blue-600 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Científicamente probado</h4>
+                                <p class="text-sm text-gray-600">Respaldado por investigaciones y formulado por expertos en nutrición deportiva.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-leaf text-blue-600 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Natural y seguro</h4>
+                                <p class="text-sm text-gray-600">Libre de sustancias prohibidas y rigurosamente probado para garantizar su pureza.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-8">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden relative">
+                        <img src="imagen.png" alt="Athlete training" class="w-full h-auto object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6 text-white">
+                            <h3 class="font-bold text-xl mb-2">Compra tus suplementos de calidad</h3>
+                            <p class="text-sm">Y obtén asesoramiento personalizado ¡Gratis!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Lo que dicen nuestros clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">El pre-entreno que ofrece la marca PrimeRX me da una energía increíble para mis entrenamientos. He probado muchas marcas, pero PrimeRX es de otro nivel. ¡Recomendado!</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold">Michael R.</h4>
+                            <p class="text-gray-600 text-sm">Presonal Trainer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">La proteina concentrada whey se mezcla perfectamente sin grumos. El sabor a helado de vainilla es riquísimo y me ha ayudado a alcanzar mis objetivos de proteína sin hincharme.</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold">Sarah K.</h4>
+                            <p class="text-gray-600 text-sm">Gimnasta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">He estado usando la creatina Creabol que ofrece PrimeRX en mis entrenamientos largos y la diferencia en mi recuperación es notable. ¡Excelente producto y envío rápido!</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Customer" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold">David T.</h4>
+                            <p class="text-gray-600 text-sm">Corredor de maratón</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gradient-to-r from-indigo-900 to-blue-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Listo para maximizar tus resultados
+                <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                    ¿Y pasar al siguiente nivel?
+                </span>
+            </h2>
+
+            <p class="text-xl mb-8 max-w-3xl mx-auto text-gray-200">
+                Únase a miles de atletas y entusiastas del fitness que confían en PrimeFuel para sus necesidades de nutrición deportiva.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-6">
+                <a href="https://api.whatsapp.com/send?phone=51977480721&text=¡Hola!%20Estoy%20interesado%20en%20los%20suplementos%20de%20PrimeRX%20y%20quisiera%20más%20información." 
+                    target="_blank" 
+                    rel="noopener" 
+                    class="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-orange-500 hover:to-yellow-500 text-black font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">
+                    Compre nuestros productos
+                </a>
+
+                <a href="https://api.whatsapp.com/send?phone=51977480721&text=¡Hola!%20Estoy%20interesado%20en%20los%20suplementos%20de%20PrimeRX%20y%20quisiera%20más%20información." 
+                    target="_blank" 
+                    rel="noopener" 
+                    class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-bold py-3 px-8 rounded-full shadow-lg border border-white border-opacity-30 transition transform hover:scale-105">
+                    Obtenga asesoramiento personalizado
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Ponte en contacto</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Información del contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Reiner Jimenez Huaman</h4>
+                                <p class="text-sm text-gray-600">José Prato 634 - Tingo María</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Celular</h4>
+                                <p class="text-sm text-gray-600">977480721</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p class="text-sm text-gray-600">reinerjj11@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold mb-4">Sígeme en:</h3>
+                        <div class="flex space-x-4">
+
+                            <a href="https://www.facebook.com/share/1CPXct796a/?mibextid=wwXIfr" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@reiner_jh?_t=ZM-8wvVVQXQi8c&_r=1" class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-tiktok"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/reiner_jz/profilecard/?igsh=MW0zY2pkY2oxODl6cw==" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition" target="_blank" rel="noopener noreferrer">
+                           <i class="fab fa-instagram"></i>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fas fa-dumbbell text-yellow-400 text-2xl mr-2"></i>
+                    <span class="font-bold text-xl bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">PrimeRX</span>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    &copy; 2025 PrimeRX desarrollado por Reiner Jimenez Huaman.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    // === FILTRO DE CATEGORÍAS ===
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            categoryBtns.forEach(b => {
+                b.classList.remove('bg-blue-600', 'text-white');
+                b.classList.add('bg-gray-200', 'hover:bg-gray-300');
+            });
+            btn.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+            btn.classList.add('bg-blue-600', 'text-white');
+            console.log(`Filtering by: ${btn.textContent.trim()}`);
+        });
+    });
+
+
+    // === MODAL DE PRODUCTO ===
+    function openProductModal(btn) {
+        const modal = document.getElementById('modalProducto');
+
+        // Rellenar datos desde los atributos del botón
+        document.getElementById('modalTitle').textContent = btn.dataset.title || '';
+        document.getElementById('modalPrice').textContent = btn.dataset.price || '';
+        document.getElementById('modalRating').textContent = btn.dataset.rating || '';
+        document.getElementById('modalDesc').textContent = btn.dataset.desc || '';
+        document.getElementById('modalPresentations').textContent = btn.dataset.presentations || '';
+        document.getElementById('modalFlavors').textContent = btn.dataset.flavors || '';
+        document.getElementById('modalImage').src = btn.dataset.image || '';
+
+        // Mostrar modal
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+
+        // Desactivar scroll de fondo
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeProductModal() {
+        const modal = document.getElementById('modalProducto');
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+    }
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeProductModal();
+    });
+
+    // Cerrar clic fuera del modal
+    document.addEventListener('click', (e) => {
+        const modal = document.getElementById('modalProducto');
+        if (modal.classList.contains('flex') && e.target === modal) closeProductModal();
+    });
+</script>
+
+<!-- === MODAL DE PRODUCTO === -->
+<div id="modalProducto"
+     class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+  <div class="bg-white rounded-lg p-6 max-w-lg w-11/12 relative">
+    <button class="absolute top-3 right-3 text-gray-500 text-2xl font-bold hover:text-black"
+            onclick="closeProductModal()">&times;</button>
+
+    <div class="flex gap-4">
+      <img id="modalImage" src="" alt="" class="w-32 h-32 object-contain bg-gray-100 p-2 rounded" />
+      <div class="flex-1">
+        <h3 id="modalTitle" class="text-2xl font-bold mb-1"></h3>
+        <p id="modalRating" class="text-yellow-400 mb-2"></p>
+        <p id="modalPrice" class="text-red-500 font-bold text-xl mb-3"></p>
+      </div>
+    </div>
+
+    <p id="modalDesc" class="text-gray-700 mb-4"></p>
+    <p class="text-gray-800"><strong>Presentación:</strong> <span id="modalPresentations"></span></p>
+    <p class="text-gray-800 mb-4"><strong>Sabor:</strong> <span id="modalFlavors"></span></p>
+
+    <div class="text-right">
+      <button onclick="closeProductModal()"
+              class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded">
+        Cerrar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- === BOTÓN FLOTANTE DE WHATSAPP === -->
+<a href="https://api.whatsapp.com/send?phone=51977480721&text=¡Hola%20Reiner!%20Estoy%20interesado%20en%20los%20suplementos%20de%20PrimeRX%20y%20quisiera%20más%20información."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   title="Chatea con nosotros por WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+        class="whatsapp-icon">
+</a>
+
+<style>
+/* === ESTILOS DEL BOTÓN FLOTANTE DE WHATSAPP === */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20ba5a;
+}
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+</style>
+</body>
+</html>
