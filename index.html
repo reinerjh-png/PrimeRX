@@ -24,6 +24,26 @@
             50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
+
+        #menu-links {
+        list-style: none;
+        padding: 8px 0;
+        }
+
+        #menu-links a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s, color 0.3s;
+        }
+
+        #menu-links a:hover {
+        background-color: #0a84ff;
+        color: white;
+        }
+
     </style>
 </head>
 <body class="bg-gray-50 font-sans antialiased">
@@ -34,16 +54,19 @@
                 <i class="fas fa-dumbbell text-yellow-400 text-2xl"></i>
                 <span class="font-bold text-xl bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">PrimeRX</span>
             </div>
-            <div class="hidden md:flex space-x-6">
-                <a href="#products" class="hover:text-yellow-300 transition">Productos</a>
-                <a href="#about" class="hover:text-yellow-300 transition">Acerca de</a>
-                <a href="#reviews" class="hover:text-yellow-300 transition">Reseñas</a>
-                <a href="#contact" class="hover:text-yellow-300 transition">Contacto</a>
-            </div>
             <div class="flex items-center space-x-4">
-                <button class="md:hidden text-xl focus:outline-none">
-                    <i class="fas fa-bars"></i>
-                </button>
+            <div class="relative flex items-center space-x-4">
+            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Menú desplegable -->
+            <ul id="menu-links" class="hidden absolute top-12 right-0 bg-white shadow-lg rounded-lg w-48 z-50">
+                <li><a href="#productos">🛍️ Productos</a></li>
+                <li><a href="#primerx">🏋️ Sobre PrimeRX</a></li>
+                <li><a href="#testimonios">⭐ Testimonios</a></li>
+                <li><a href="#contacto">📞 Contacto</a></li>
+            </ul>
             </div>
         </div>
     </nav>
@@ -107,7 +130,7 @@
 
     <section id="products" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Nuestros productos más vendidos</h2>
+            <h2 id="productos" class="text-3xl font-bold text-center mb-12">Nuestros productos más vendidos</h2>
             
             <div class="flex justify-center mb-8">
                 <div class="inline-flex rounded-md shadow-sm" role="group">
@@ -290,7 +313,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                    <h2 class="text-3xl font-bold mb-4">¿Por qué elegir?<span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> PrimeRX</span></h2>
+                    <h2 id="primerx" class="text-3xl font-bold mb-4">¿Por qué elegir?<span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> PrimeRX</span></h2>
                     <p class="text-gray-700 mb-6">En PrimeRX, nos comprometemos a ofrecer únicamente suplementos de nutrición deportiva de la más alta calidad. Nuestros productos están formulados científicamente y rigurosamente probados para garantizar que obtengas los resultados que mereces.</p>
                     
                     <div class="space-y-4">
@@ -338,7 +361,7 @@
 
     <section id="reviews" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Lo que dicen nuestros clientes</h2>
+            <h2 id="testimonios" class="text-3xl font-bold text-center mb-12">Lo que dicen nuestros clientes</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Testimonio 1 -->
                 <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
@@ -435,7 +458,7 @@
 
     <section id="contact" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Ponte en contacto</h2>
+            <h2 id="contacto" class="text-3xl font-bold text-center mb-12">Ponte en contacto</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
@@ -561,6 +584,22 @@
         const modal = document.getElementById('modalProducto');
         if (modal.classList.contains('flex') && e.target === modal) closeProductModal();
     });
+
+    const menuBtn = document.getElementById('menu-btn');
+    const menuLinks = document.getElementById('menu-links');
+
+    menuBtn.addEventListener('click', () => {
+        menuLinks.classList.toggle('hidden');
+    });
+
+    // Opcional: cerrar el menú al hacer clic en un enlace
+    const links = menuLinks.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+        menuLinks.classList.add('hidden');
+        });
+    });
+
 </script>
 
 <!-- === MODAL DE PRODUCTO === -->
@@ -604,33 +643,33 @@
 </a>
 
 <style>
-/* === ESTILOS DEL BOTÓN FLOTANTE DE WHATSAPP === */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: #FFF;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #20ba5a;
-}
-.whatsapp-icon {
-    width: 35px;
-    height: 35px;
-}
+    /* === ESTILOS DEL BOTÓN FLOTANTE DE WHATSAPP === */
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: #FFF;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        background-color: #20ba5a;
+    }
+    .whatsapp-icon {
+        width: 35px;
+        height: 35px;
+    }
 </style>
 </body>
 </html>
