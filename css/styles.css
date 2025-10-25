@@ -1,0 +1,67 @@
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.pulse-hover:hover {
+    animation: pulse 1.5s infinite;
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+#menu-links {
+    list-style: none;
+    padding: 8px 0;
+}
+
+#menu-links a {
+    display: block;
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+#menu-links a:hover {
+    background-color: #0a84ff;
+    color: white;
+}
+
+/* Boton flotante de whatsapp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+        transform: scale(1.1);
+        background-color: #20ba5a;
+        }
+
+.whatsapp-icon {
+        width: 35px;
+        height: 35px;
+        }

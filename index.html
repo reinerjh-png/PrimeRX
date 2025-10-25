@@ -3,80 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suplementos PrimeRX</title>
+    <title>Suplementos PrimeRX | Nutrición deportiva y asesoría personalizada</title>
     <meta name="description" content="Mejora tu rendimiento con PrimeRX: suplementos deportivos originales, asesoría personalizada ¡gratuita! y envío rápido a todo el Perú. Tu cuerpo, tus metas, nuestra guía.">
     <meta name="author" content="PrimeRX">
     <meta name="keywords" content="suplementos deportivos, proteinas, aminoacidos, creatina, vitaminas, salud, fitness">
-    <link rel="icon" href="PrimeRX.png">
+    <link rel="icon" href="img/PrimeRX.png">
+    <!-- Canonical para evitar contenido duplicado -->
+    <link rel="canonical" href="https://prime-rx.vercel.app/">
+    <!-- Open Graph (para compartir en redes sociales) -->
+    <meta property="og:title" content="PrimeRX - Suplementos deportivos de calidad en Perú">
+    <meta property="og:description" content="Potencia tu rendimiento con PrimeRX. Suplementos originales, asesoría gratuita y envío rápido a todo el Perú.">
+    <meta property="og:url" content="https://prime-rx.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://prime-rx.vercel.app/img/og-banner.png">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PrimeRX - Suplementos deportivos de calidad">
+    <meta name="twitter:description" content="Logra tus metas con PrimeRX. Proteínas, creatina, aminoácidos y más.">
+    <meta name="twitter:image" content="https://prime-rx.vercel.app/img/og-banner.png">
+      <!-- Datos estructurados (JSON-LD para SEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PrimeRX",
+        "url": "https://prime-rx.vercel.app/",
+        "logo": "https://prime-rx.vercel.app/img/PrimeRX.png",
+        "sameAs": [
+        "https://www.facebook.com/PrimeRX",
+        "https://www.instagram.com/PrimeRX",
+        "https://www.tiktok.com/@PrimeRX"
+        ],
+        "description": "Suplementos deportivos, asesoría personalizada y envío a todo el Perú."
+    }
+    </script>
+    <!-- Tailwind y Font Awesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        .pulse-hover:hover {
-            animation: pulse 1.5s infinite;
-        }
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-
-        #menu-links {
-        list-style: none;
-        padding: 8px 0;
-        }
-
-        #menu-links a {
-        display: block;
-        padding: 10px 16px;
-        color: #333;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: background 0.3s, color 0.3s;
-        }
-
-        #menu-links a:hover {
-        background-color: #0a84ff;
-        color: white;
-        }
-
-    /* === ESTILOS DEL BOTÓN FLOTANTE DE WHATSAPP === */
-        .whatsapp-float {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25D366;
-        color: #FFF;
-        border-radius: 50%;
-        text-align: center;
-        font-size: 30px;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-        z-index: 1000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.3s ease;
-        }
-        .whatsapp-float:hover {
-        transform: scale(1.1);
-        background-color: #20ba5a;
-        }
-        .whatsapp-icon {
-        width: 35px;
-        height: 35px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-gray-50 font-sans antialiased">
 
@@ -424,7 +388,7 @@
                 </div>
                 <div class="md:w-1/2 md:pl-8">
                     <div class="bg-gray-100 rounded-xl overflow-hidden relative">
-                        <img src="imagen.png" alt="Athlete training" class="w-full h-auto object-cover">
+                        <img src="img/imagen.png" alt="Athlete training" class="w-full h-auto object-cover">
                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6 text-white">
                             <h3 class="font-bold text-xl mb-2">Compra tus suplementos de calidad</h3>
                             <p class="text-sm">Y obtén asesoramiento personalizado ¡Gratis!</p>
@@ -650,79 +614,6 @@
             </div>
         </div>
     </footer>
-
-<script>
-    // === FILTRO DE CATEGORÍAS ===
-    const categoryBtns = document.querySelectorAll('.category-btn');
-    categoryBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            categoryBtns.forEach(b => {
-                b.classList.remove('bg-blue-600', 'text-white');
-                b.classList.add('bg-gray-200', 'hover:bg-gray-300');
-            });
-            btn.classList.remove('bg-gray-200', 'hover:bg-gray-300');
-            btn.classList.add('bg-blue-600', 'text-white');
-            console.log(`Filtering by: ${btn.textContent.trim()}`);
-        });
-    });
-
-
-    // === MODAL DE PRODUCTO ===
-    function openProductModal(btn) {
-        const modal = document.getElementById('modalProducto');
-
-        // Rellenar datos desde los atributos del botón
-        document.getElementById('modalTitle').textContent = btn.dataset.title || '';
-        document.getElementById('modalPrice').textContent = btn.dataset.price || '';
-        document.getElementById('modalRating').textContent = btn.dataset.rating || '';
-        document.getElementById('modalDesc').textContent = btn.dataset.desc || '';
-        document.getElementById('modalPresentations').textContent = btn.dataset.presentations || '';
-        document.getElementById('modalFlavors').textContent = btn.dataset.flavors || '';
-        document.getElementById('modalImage').src = btn.dataset.image || '';
-
-        // Mostrar modal
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-
-        // Desactivar scroll de fondo
-        document.documentElement.style.overflow = 'hidden';
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeProductModal() {
-        const modal = document.getElementById('modalProducto');
-        modal.classList.remove('flex');
-        modal.classList.add('hidden');
-        document.documentElement.style.overflow = '';
-        document.body.style.overflow = '';
-    }
-
-    // Cerrar con tecla ESC
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeProductModal();
-    });
-
-    // Cerrar clic fuera del modal
-    document.addEventListener('click', (e) => {
-        const modal = document.getElementById('modalProducto');
-        if (modal.classList.contains('flex') && e.target === modal) closeProductModal();
-    });
-
-    const menuBtn = document.getElementById('menu-btn');
-    const menuLinks = document.getElementById('menu-links');
-
-    menuBtn.addEventListener('click', () => {
-        menuLinks.classList.toggle('hidden');
-    });
-
-    // Opcional: cerrar el menú al hacer clic en un enlace
-    const links = menuLinks.querySelectorAll('a');
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-        menuLinks.classList.add('hidden');
-        });
-    });
-
-</script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
