@@ -108,11 +108,16 @@
                     <a href="#primerx"
                         class="bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-bold py-3 px-6 rounded-full shadow-lg border border-white border-opacity-20 transition">Más
                         información</a>
+                    <button id="audio-btn"
+                        class="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-orange-500 hover:to-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:scale-105 flex items-center">
+                        <i class="fas fa-volume-up mr-2"></i>
+                        <span id="audio-btn-text">Escuchar audio</span>
+                    </button>
                 </div>
             </div>
             <div class="md:w-1/2 relative">
                 <div class="floating">
-                    <img src="https://usasuplementos.co/wp-content/uploads/2025/05/banner-promos-1200x720-1.webp"
+                    <img src="img/og-banner.png"
                         alt="Suplementos proteicos" class="w-full max-w-md mx-auto">
                 </div>
                 <div
@@ -833,6 +838,12 @@
                 class="whatsapp-icon">
         </a>
     </section>
+
+    <!-- Elemento de audio oculto -->
+    <audio id="audio-player" preload="auto">
+        <source src="assets/Suplementos_y_asesoramiento_PrimeRX.m4a" type="audio/mp4">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
 
     <footer class="bg-gray-900 border-t border-gray-800 text-white pt-16 pb-8 relative overflow-hidden">
         <!-- Elemento de fondo -->

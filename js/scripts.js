@@ -211,3 +211,36 @@ if (formResetBtn && formSuccessOverlay) {
     formSuccessOverlay.classList.add("hidden");
   });
 }
+
+// =============================================
+// 5. REPRODUCIR AUDIO
+// =============================================
+const audioBtn = document.getElementById("audio-btn");
+const audioPlayer = document.getElementById("audio-player");
+const audioBtnText = document.getElementById("audio-btn-text");
+const audioBtnIcon = audioBtn ? audioBtn.querySelector("i") : null;
+
+if (audioBtn && audioPlayer) {
+  audioBtn.addEventListener("click", () => {
+    if (audioPlayer.paused) {
+      // Reproducir audio
+      audioPlayer.play();
+      audioBtnText.textContent = "Pausar audio";
+      audioBtnIcon.classList.remove("fa-volume-up");
+      audioBtnIcon.classList.add("fa-pause");
+    } else {
+      // Pausar audio
+      audioPlayer.pause();
+      audioBtnText.textContent = "Escuchar audio";
+      audioBtnIcon.classList.remove("fa-pause");
+      audioBtnIcon.classList.add("fa-volume-up");
+    }
+  });
+
+  // Resetear estado cuando el audio termina
+  audioPlayer.addEventListener("ended", () => {
+    audioBtnText.textContent = "Escuchar audio";
+    audioBtnIcon.classList.remove("fa-pause");
+    audioBtnIcon.classList.add("fa-volume-up");
+  });
+}
